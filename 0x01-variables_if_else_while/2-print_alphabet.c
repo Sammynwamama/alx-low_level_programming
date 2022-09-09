@@ -8,7 +8,7 @@
  * Return: Always 0 (Success)
  */
 
-int main(voild)
+int main(void)
 {
 	char low;
 
