@@ -1,26 +1,29 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
+  * main - finds and prints the sum of the even-valued terms
+ * followed by a new line
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
 	int i;
-	long int fibonacci[50], sum = 2;
+	unsigned long int j, k, next, sum;
 
-		fibonacci[0] = 1;
-		fibonacci[1] = 2;
-
-	for (i = 2; i < 50; i++)
+	j = 1;
+	k = 2;
+	sum = 0;
+	for (i = 1; i <= 33; ++i)
 	{
-		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-	if ((fibonacci[i] % 2) == 0 && fibonacci[i] < 4000000)
-		sum += fibonacci[i];
+		if (j < 4000000 && (j % 2) == 0)
+		{
+			sum = sum + j;
+		}
+		next = j + k;
+		j = k;
+		k = next;
 	}
-	printf("%ld\n", sum);
-
+	printf("%lu\n", sum);
 	return (0);
 }
