@@ -1,55 +1,30 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_times_table - prints times table for numbers from 0-14
- * @n: An input integer value
- * Return: 0
+ * main - prints the first 50 Fibonacci numbers, starting with 1 and 2
+ * followed by a new line
+ * Return: Always 0 (Success)
  */
-void print_times_table(int n)
-{
-	int i, j;
 
-	if (n > 0 && n < 15)
+int main(void)
+{
+	long int i, j, k, next;
+
+	j = 1;
+	k = 2;
+	for (i = 1; i <= 50; ++i)
 	{
-		for (i = 0; i <= n; i++)
+		if (j != 20365011074)
 		{
-			_putchar('0');
-			for (j = 1; j <= n; j++)
-				putformat(i * j);
-			_putchar('\n');
+			printf("%ld, ", j);
 		}
+		else
+		{
+			printf("%ld\n", j);
+		}
+		next = j + k;
+		j = k;
+		k = next;
 	}
-}
-
-/**
- * putformat - formatted characters to output
- * @n: number to format
- * Return: 0
- */
-void putformat(int n)
-{
-	if (n <= 9)
-	{
-		_putchar(',');
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(n + '0');
-	}
-	else if (n > 9 && n <= 99)
-	{
-		_putchar(',');
-		_putchar(' ');
-		_putchar(' ');
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else
-	{
-		_putchar(',');
-		_putchar(' ');
-		_putchar(n / 100 + '0');
-		_putchar(n / 10 % 10 + '0');
-		_putchar(n % 10 + '0');
-	}
+	return (0);
 }
