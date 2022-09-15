@@ -1,1 +1,1 @@
-My first debugging as a alx software engineering student
+My first debugging as aALX software engineering student.
