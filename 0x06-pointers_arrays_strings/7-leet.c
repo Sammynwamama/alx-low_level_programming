@@ -1,5 +1,5 @@
 #include "main.h"
-:wq
+
 /**
  * leet -  encodes a string into 1337.
  * @Night: string i used
