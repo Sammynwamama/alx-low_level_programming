@@ -11,7 +11,6 @@ char *leet(char *Night)
 	int count = 0, i;
 
 	int lower_case[] = {97, 101, 111, 116, 108};
-
 	int upper_case[] = {65, 69, 79, 84, 76};
 	int numbers[] = {52, 51, 48, 55, 49};
 
@@ -21,7 +20,7 @@ char *leet(char *Night)
 		{
 			if (*(Night + count) == lower_case[i] || *(Night + count) == upper_case[i])
 			{
-																							*(Night + count) = numbers[i];
+				*(Night + count) = numbers[i];
 				break;
 			}
 		}
