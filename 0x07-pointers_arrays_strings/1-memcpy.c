@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 
 /**
  * _memcpy - like memset but a function that copies memory area
