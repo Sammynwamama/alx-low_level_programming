@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stio.h>
 
 /**
  * alloc_grid - A function that returns a pointer to a
@@ -11,28 +12,33 @@
 
 int **alloc_grid(int width, int height)
 {
-	int **array, i = 0, j;
+	int **night;
+	int i, a;
 
-	if (width <= 0 || height = 0)
+	if (width <= 0 || height <= 0)
 		return (NULL);
-
-	array = (int **)malloc(sizeof(int *) * height);
-	if (array == NULL)
+	night = malloc(height * sizeof(int *));
+	/* if night is equal to Null return Null*/
+	if (night == NULL)
 		return (NULL);
-	for (; i < height; i++)
-	{
-		array[i] = (int *)malloc(sizeof(int) * width);
-		if (array[i] == NULL)
-			for(; i >= 0; i--)
-			{
-				free(array[i]);
-			}
-			free(array);
-			return (NULL);
-
-	}
+	/*for every i thats 0 and less than height increase i*/
 	for (i = 0; i < height; i++)
-		for (; j < width; j++)
-			array[i][j] = 0;
-	return (array);
+	{
+		/*size of night[i] using malloc*/
+		night[i] = malloc(width * sizeof(int));
+		/*check if night[i] is equal to Null*/
+		if (night[i] == NULL)
+		{
+			while (i >= 0)
+				/*free night[i]*/
+				free(night[i--]);
+			/* Free night*/
+			free(night);
+			return (NULL);
+		}
+			/*for every a that is less than width increase a*/
+			for (a = 0; a < width; a++)
+				night[i][a] = 0;
+	}
+	return (night);
 }
