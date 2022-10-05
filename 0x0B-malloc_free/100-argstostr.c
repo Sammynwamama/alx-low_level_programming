@@ -21,9 +21,9 @@ char *argstostr(int ac, char **av)
 			night++;
 	}
 	night += ac;
-	
+
 	str = malloc(sizeof(char) * night + 1);
-	
+
 	if (str == NULL)
 		return (NULL);
 	for (i = 0; i < ac; i++)
