@@ -40,7 +40,7 @@ char **strtow(char *str)
 	{
 		free(aout);
 		return (NULL);
-	}	
+	}
 	for (i = a1 = 0; i < height; i++)
 	{
 		for (c = a1; str[c] != '\0'; c++)
