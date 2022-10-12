@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	int num1, num2;
 	char *operator;
 
-	/* Error if arguments are not 4 with the executable*/
+	/* Error if arguments are not 4 with the executable */
 	if (argc != 4)
 	{
 		printf("Error\n");
@@ -34,14 +34,14 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]); /* as stated above */
 	operator = argv[2];
 
-	/* Error if operator is not null or a 2d array '\*'*/
+	/* Error if operator is not null or a 2d array '\*' */
 	if (get_op_func(operator) == NULL || operator[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	/* Error if user tries to divide / (47) or % (37) by 0*/
+	/* Error if user tries to divide / (47) or % (37) by 0 */
 	if ((*operator == 47 || *operator == 37) && num2 == 0)
 	{
 		printf("Error\n");
