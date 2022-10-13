@@ -19,7 +19,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		va_start(night, n);
 
 		while (a < n)
-		{	
+		{
 			string = va_arg(night, char *);
 			if (string == NULL)
 				printf("%s", "(nil)");
