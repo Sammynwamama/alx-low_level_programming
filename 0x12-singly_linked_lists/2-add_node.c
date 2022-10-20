@@ -5,7 +5,6 @@
 
 
 /**
-
  * add_node - A function that adds a node to the head of linked list
 
  * @head: pointer to a list_t pointer that points to the head struct
