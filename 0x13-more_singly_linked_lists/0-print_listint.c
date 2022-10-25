@@ -5,7 +5,6 @@
 
 
 /**
-
  * print_listint - A function that prints all the elements in the list
 
  * @h: A pointer to listint structure
